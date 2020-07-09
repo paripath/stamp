@@ -1,0 +1,2 @@
+# stamp
+Floating Node License 
