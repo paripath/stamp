@@ -1,0 +1,13 @@
+#!/bin/bash
+#Description:
+# 	daemon not started for expiry date
+
+export PARIPATH_FORCE_DAEMON_START=1
+lic_file=cutter.5.ref
+out_file=client.4.out
+
+# run server with 1 server, 2 clients
+../bin/plmgrd.exe $lic_file $out_file
+
+# shut down daemon
+../bin/client.exe $lic_file 1 2; # shutdown

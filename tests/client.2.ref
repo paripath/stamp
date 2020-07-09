@@ -1,0 +1,17 @@
+ERROR: FEATURE in input license file expired.
+       FEATURE guna-server 14.1 03/15/2014 03/21/2014 1 6ntidu5p6vh3u
+ERROR: FEATURE in input license file expired.
+       FEATURE guna-client 14.1 03/15/2014 03/21/2014 8 hbziubqqx5v8a
+INFO: total of 0 licenses were added.
+INFO: request checkin.guna-server rejected.
+INFO: request checkin.guna-server rejected.
+INFO: request checkout.guna-server rejected.
+INFO: request checkout.guna-server rejected.
+INFO: request checkin.guna-server rejected.
+INFO: request checkout.guna-server rejected.
+INFO: request checkout.guna-client rejected.
+INFO: request checkout.guna-client rejected.
+INFO: request checkout.guna-client rejected.
+INFO: request checkin.guna-client rejected.
+INFO: request checkin.guna-client rejected.
+shutting down.

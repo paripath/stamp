@@ -1,0 +1,30 @@
+#!/bin/bash
+#Description:
+# 	expiry date test.
+
+export PARIPATH_FORCE_DAEMON_START=1
+lic_file=cutter.5.ref
+out_file=client.2.out
+
+export PARIPATH_FORCE_DAEMON_START=1
+# run server with 1 server, 2 clients
+../bin/plmgrd.exe $lic_file $out_file
+sleep 3;
+
+# ../bin/client.exe <lic-feature> <lic-request>
+../bin/client.exe $lic_file 0 1; # guna-server checkin, rejected
+../bin/client.exe $lic_file 0 1; # guna-client checkin, rejected
+../bin/client.exe $lic_file 0 0; # guna-server checkout, granted
+../bin/client.exe $lic_file 0 0; # guna-server checkout, rejected
+../bin/client.exe $lic_file 0 1; # guna-server checkin, granted
+../bin/client.exe $lic_file 0 0; # guna-server checkout, granted
+../bin/client.exe $lic_file 1 0; # guna-client checkout, granted
+../bin/client.exe $lic_file 1 0; # guna-client checkout, granted
+../bin/client.exe $lic_file 1 0; # guna-client checkout, rejected
+../bin/client.exe $lic_file 1 1; # guna-client checkout, grantned
+../bin/client.exe $lic_file 1 1; # guna-client checkout, grantned
+
+# shut down daemon
+../bin/client.exe $lic_file 1 2; # shutdown
+
+unset PARIPATH_FORCE_DAEMON_START

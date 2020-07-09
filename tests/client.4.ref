@@ -1,0 +1,6 @@
+ERROR: FEATURE in input license file expired.
+       FEATURE guna-server 14.1 03/15/2014 03/21/2014 1 6ntidu5p6vh3u
+ERROR: FEATURE in input license file expired.
+       FEATURE guna-client 14.1 03/15/2014 03/21/2014 8 hbziubqqx5v8a
+INFO: total of 0 licenses were added.
+ERROR: could not bind socket to start server.

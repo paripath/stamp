@@ -1,0 +1,17 @@
+ERROR: input license file FEATURE is not in effect yet.
+       FEATURE guna-server 14.1 03/15/2024 03/21/2024 1 jmi4ec6642ak6
+ERROR: input license file FEATURE is not in effect yet.
+       FEATURE guna-client 14.1 03/15/2024 03/21/2024 8 vckyp7udknkgi
+INFO: total of 0 licenses were added.
+INFO: request checkin.guna-server rejected.
+INFO: request checkin.guna-server rejected.
+INFO: request checkout.guna-server rejected.
+INFO: request checkout.guna-server rejected.
+INFO: request checkin.guna-server rejected.
+INFO: request checkout.guna-server rejected.
+INFO: request checkout.guna-client rejected.
+INFO: request checkout.guna-client rejected.
+INFO: request checkout.guna-client rejected.
+INFO: request checkin.guna-client rejected.
+INFO: request checkin.guna-client rejected.
+shutting down.

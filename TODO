@@ -1,0 +1,7 @@
+- add product seed in
+	- cutter
+	- client
+ to make sure, if someone has cutter.exe, they won't be able
+ to run all past/future releases.
+- enhance checkin/checkout record to include
+	- license_type, checkin_time, checkout_time etc to create a usage report.

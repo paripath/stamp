@@ -1,0 +1,30 @@
+#!/bin/bash
+#Description:
+# 	negative tests for client and server.
+
+export PARIPATH_FORCE_DAEMON_START=1
+lic_file=cutter.4.ref
+tmp_file=client.1.tmp
+out_file=client.1.out
+
+# run server with 1 server, 2 clients
+../bin/plmgrd.exe $lic_file $tmp_file
+sleep 3;
+
+# Action and result for following tests.
+# guna-server checkin, rejected
+# guna-client checkin, rejected
+# guna-server checkout, granted
+# guna-server checkout, rejected
+# guna-server checkin, granted
+# guna-server checkout, granted
+# guna-client checkout, granted
+# guna-client checkout, granted
+# guna-client checkout, rejected
+# guna-client checkout, grantned
+# guna-client checkout, grantned
+../bin/client.exe $lic_file 000000111111 110010000112
+
+grep -v ^WARN $tmp_file > $out_file
+rm -f $tmp_file
+
