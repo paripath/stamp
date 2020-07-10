@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/bash
 
 # Description:
 #        Test harness. It is written in sh, since csh does not
@@ -7,10 +7,10 @@
 # Usage:
 # ../scripts/runTests.sh "test1 test2" - to run test1 and test2
 # ../scripts/runTests.sh               - to run all tests
-# 
+#
 usage() {
 	echo `basename $0`: ERROR: $* 1>&2
-	echo usage: `basename $0` 
+	echo usage: `basename $0`
 	exit 1
 }
 
@@ -44,7 +44,7 @@ CLEAN() {
 
 COMPARE () {
 	DIFF=/usr/bin/diff
-	$DIFF ${1}.ref ${1}.out > ${1}.diff 2>&1 
+	$DIFF ${1}.ref ${1}.out > ${1}.diff 2>&1
 }
 
 RUN_CUTTER() {
@@ -71,7 +71,7 @@ REPORT() {
 	fi ;
 
 
-	echo "$test          $status"; 
+	echo "$test          $status";
 }
 
 RUN_TESTS() {
@@ -82,7 +82,7 @@ RUN_TESTS() {
 			continue ;
 		fi;
 
-		CLEAN 
+		CLEAN
 		start=`date +%s`
 		if [ "x$1" == "xCUTTER_TESTS" ] ; then
 			RUN_CUTTER $test

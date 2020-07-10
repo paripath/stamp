@@ -11,7 +11,7 @@ GCC=/usr/bin/g++
 AR_RC=ar rc
 STRIP=echo
 
-INCLUDES=-I. -Iinclude -isystem$(SYSTEM_INC)/cryptopp
+INCLUDES=-I. -Iinclude -isystem $(SYSTEM_INC)/cryptopp
 CXX_FLAGS=-O3 -Wall -Wno-write-strings -D_NO_CONFIG_MGR
 
 SRCS= licenseFile.cpp licenseHasher.cpp licenseManager.cpp licenseCutter.cpp licenseDaemon.cpp licenseClient.cpp message.cpp

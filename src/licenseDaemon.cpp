@@ -592,8 +592,9 @@ isDaemonRunning(char* exeName, FILE* logFP)
 	char buf[512];
 	pid_t self_pid = getpid() ;
 
-    if ( getenv("PARIPATH_FORCE_DAEMON_START") )
+    if ( getenv("PARIPATH_FORCE_DAEMON_START") ) {
         return 0 ; // not running
+    }
 
 	if (!(dir = opendir("/proc"))) {
 		fprintf(logFP, "ERROR: could not open /proc.\n") ;
