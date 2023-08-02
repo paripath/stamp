@@ -1,5 +1,5 @@
 include Makefile.vars
-COMPANY=aits
+COMPANY=paripath
 INC_DIR=include
 SRC_DIR=src
 OBJ_DIR=obj
